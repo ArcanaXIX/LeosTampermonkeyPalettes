@@ -1,0 +1,24 @@
+// ==UserScript==
+// @name Tumblr Custom Palette With Background Image
+// @include https://www.tumblr.com/*
+// @match https://www.tumblr.com/*
+// @grant GM.addStyle
+// ==/UserScript==
+
+// Replace the values with any RGB value you like to create a custom palette on Tumblr.
+// LEAVE THE NAVY BLANK! Overriding "navy" with a blank value means you can see a background image underneath it.
+// example: replace 0, 26, 0 in line 12 with 0, 0, 0 to make the background color black.
+// I recommend the w3schools HTML Color Picker to play with color palettes: https://www.w3schools.com/colors/colors_picker.asp
+// You can upload any image you'd like as a background image to postimages: https://postimages.org/
+
+GM.addStyle(":root{--navy: !important}"); //LEAVE THIS - no color means you can see the background image now
+GM.addStyle(":root{--accent: 255, 243, 18!important}"); //highlights and notifications
+GM.addStyle(":root{--white: 8, 33, 7!important}"); //post body color
+GM.addStyle(":root{--white-on-dark: 0, 230, 0!important}"); //dashboard tabs, tumblr logo, other icons
+GM.addStyle(":root{--black: 255, 255, 230!important}"); //text color
+
+GM.addStyle("body { background-image:url('https://i.postimg.cc/K8HGRp6q/foresttemple.png')!important}"); //background image - upload your own to postimages and replace the URL in quotes here
+
+// There are also variables for the colors of the post types at the top of the dash.
+// I didn't bother including those but if you want, they are red, orange, yellow, green, blue, purple, pink.
+// So you can update them in the same way as the navy, accent, white, etc. are updated above.
