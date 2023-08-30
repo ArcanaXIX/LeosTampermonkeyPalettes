@@ -5,7 +5,13 @@
 // @grant GM.addStyle
 // ==/UserScript==
 
-GM.addStyle(":root{--color-hinted-grey-1:!important}"); //get rid of background color
+// Replace the values with any hex value you like to create a custom palette on Twitch.
+// LEAVE THE COLOR-HINTED-GREY-1 BLANK! Overriding "color-hinted-grey-1" with a blank value means you can see a background image underneath it.
+// example: replace #17120c in line 16 with #000000 to make the sidebar color black.
+// I recommend the w3schools HTML Color Picker to play with color palettes: https://www.w3schools.com/colors/colors_picker.asp
+// You can upload any image you'd like as a background image to postimages: https://postimages.org/
+
+GM.addStyle(":root{--color-hinted-grey-1:!important}"); //LEAVE EMPTY = gets rid of background color
 GM.addStyle(":root{--color-hinted-grey-2: #001a00!important}"); //navbar color
 GM.addStyle(":root{--color-hinted-grey-3: #17120c!important}"); //sidebar color
 GM.addStyle(":root{--color-hinted-grey-4: #003300!important}"); //sidebar color hover
