@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name Twitch Custom Palette
+// @include https://www.twitch.tv/*
+// @match https://www.twitch.tv/*
+// @grant GM.addStyle
+// ==/UserScript==
+
+GM.addStyle(":root{--color-hinted-grey-1:!important}"); //get rid of background color
+GM.addStyle(":root{--color-hinted-grey-2: #001a00!important}"); //navbar color
+GM.addStyle(":root{--color-hinted-grey-3: #17120c!important}"); //sidebar color
+GM.addStyle(":root{--color-hinted-grey-4: #003300!important}"); //sidebar color hover
+
+GM.addStyle(":root{--color-twitch-purple-11: #00cc44!important}"); //landing tab
+GM.addStyle(":root{--color-twitch-purple-10: #009933!important}"); //sidebar tab and twitch logo
+GM.addStyle(":root{--color-twitch-purple-9: #92c800!important}"); //follow button
+GM.addStyle(":root{--color-twitch-purple-8: #00802b!important}"); //following underline
+GM.addStyle(":root{--color-accent: #33cc33!important}"); //shadow under live categories
+
+GM.addStyle(":root{--color-red: #f5d01c!important}"); //notifications
+GM.addStyle(":root{--color-red-9: #f5d01c!important}"); //live icon
+
+GM.addStyle("body { background-image:url('https://i.postimg.cc/K8HGRp6q/foresttemple.png')!important}"); //background image - upload your own to postimages and replace the URL in quotes here
