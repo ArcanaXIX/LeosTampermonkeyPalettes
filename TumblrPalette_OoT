@@ -12,7 +12,7 @@
 // You can upload any image you'd like as a background image to postimages: https://postimages.org/
 
 GM.addStyle(":root{--navy: !important}"); //LEAVE THIS - no color means you can see the background image now
-GM.addStyle(":root{--accent: 255, 243, 18!important}"); //highlights and notifications
+GM.addStyle(":root{--deprecated-accent: 255, 243, 18!important}"); //highlights and notifications. updated may 25 2024 because tumblr updated the name from --accent
 GM.addStyle(":root{--white: 8, 33, 7!important}"); //post body color
 GM.addStyle(":root{--white-on-dark: 0, 230, 0!important}"); //dashboard tabs, tumblr logo, other icons
 GM.addStyle(":root{--black: 255, 255, 230!important}"); //text color
