@@ -5,20 +5,22 @@
 // @grant GM.addStyle
 // ==/UserScript==
 
-// Replace the values with any RGB value you like to create a custom palette on Tumblr.
+//updated 06/04/2024 to reflect changes to how Tumblr pulls from color variables. it has been changing a lot recently so it's like whack-a-mole to keep up.
+
+// Replace the values with any RGB (or in some cases RGBA, which is RGB with a "1" for opacity) value you like to create a custom palette on Tumblr.
 // LEAVE THE NAVY BLANK! Overriding "navy" with a blank value means you can see a background image underneath it.
 // example: replace 0, 26, 0 in line 12 with 0, 0, 0 to make the background color black.
 // I recommend the w3schools HTML Color Picker to play with color palettes: https://www.w3schools.com/colors/colors_picker.asp
 // You can upload any image you'd like as a background image to postimages: https://postimages.org/
 
 GM.addStyle(":root{--navy: !important}"); //LEAVE THIS - no color means you can see the background image now
-GM.addStyle(":root{--deprecated-accent: 255, 243, 18!important}"); //highlights and notifications. updated may 25 2024 because tumblr updated the name from --accent
+GM.addStyle(":root{--deprecated-accent: 255, 243, 18!important}"); //links and highlights
+GM.addStyle(".jGgIg .ML6ef{background-color:var(--accent)}")
+GM.addStyle(":root{--accent: rgba(255, 243, 18, 1)!important}"); //notifications
+GM.addStyle(":root{--chrome-ui: rgba(255, 243, 18, 1)!important}"); //duplicate of "accent" in case future changes pull from this variable
+GM.addStyle(":root{--chrome-ui-hover: rgba(255, 230, 4, 1)!important}"); //hover on new post icon
 GM.addStyle(":root{--white: 8, 33, 7!important}"); //post body color
 GM.addStyle(":root{--white-on-dark: 0, 230, 0!important}"); //dashboard tabs, tumblr logo, other icons
 GM.addStyle(":root{--black: 255, 255, 230!important}"); //text color
 
 GM.addStyle("body { background-image:url('https://i.postimg.cc/K8HGRp6q/foresttemple.png')!important}"); //background image - upload your own to postimages and replace the URL in quotes here
-
-// There are also variables for the colors of the post types at the top of the dash.
-// I didn't bother including those but if you want, they are red, orange, yellow, green, blue, purple, pink.
-// So you can update them in the same way as the navy, accent, white, etc. are updated above.
