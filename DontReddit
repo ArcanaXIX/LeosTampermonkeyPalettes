@@ -1,0 +1,16 @@
+// ==UserScript==
+// @name         Don't Reddit
+// @namespace    *://*.reddit.com/*
+// @version      2025-11-25
+// @description  hoe don't do it
+// @author       meeee
+// @match        *://*.reddit.com/*
+// @include      *://*.reddit.com/*
+// @run-at       document-start
+// ==/UserScript==
+
+stop();
+var newURL = window.location.protocol + "//"
+                + "www.arcanaxix.com"
+                ;
+window.location.replace (newURL);
